@@ -1,1 +1,37 @@
-@import "../vendors/slick/slick";
+@import "../vendors/swiper/swiper.scss";
+@import "../vendors/swiper/pagination.scss";
+@import "../vendors/swiper/navigation.scss";
+@import "../vendors/swiper/grid.scss";
+@import "../vendors/rateyo/jquery.rateyo.scss";
+
+.swiper-button-next,
+.swiper-button-prev{
+    width: auto;
+    height: auto;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    display: none;
+}
+
+.swiper-pagination{
+    position: static;
+}
+
+.swiper-pagination-progressbar{
+    background-color: #e8ebf1;
+}
+
+.swiper-pagination-progressbar{
+    .swiper-pagination-progressbar-fill{
+        height: 3px;
+        background-color: #ffde00;
+        top: auto;
+        bottom: 0;
+    }
+}
+
+.rating.jq-ry-container{
+    padding: 0;
+}

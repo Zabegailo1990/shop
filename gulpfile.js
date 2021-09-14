@@ -14,7 +14,7 @@ const { render } = require('sass');
 
 
 
-// BrowserSync***
+// BrowserSync инициализация***
 gulp.task('browserSync', function(){
     browserSync.init({
         server: {
@@ -119,9 +119,10 @@ gulp.task('svgSprite', function(){
         // Удаление атрибутов
         .pipe(svgo({
             plugins:[
+                {removeViewBox: false},
                 {convertPathData: false},
                 {removeStyleElement: true},
-                {removeAttrs: {attrs: ['fill', 'stroke']}},
+                {removeAttrs: {attrs: ['fill', 'stroke', 'data-original']}},
             ]
         }))
         // Создание спрайта SYMBOL
@@ -135,6 +136,33 @@ gulp.task('svgSprite', function(){
         }))
         .pipe(gulp.dest('app/img/icons/'));
 })
+
+// gulp.task('svgCSS', function(){
+//     return gulp.src('src/img/icons/svg/*.svg')
+//         // Удаление атрибутов
+//         .pipe(svgo({
+//             plugins:[
+//                 {removeViewBox: false},
+//                 {convertPathData: false},
+//                 {removeStyleElement: true},
+//                 {removeAttrs: {attrs: ['fill', 'stroke', 'data-original']}},
+//             ]
+//         }))
+//         // Создание спрайта SYMBOL
+//         .pipe(svgSprite({
+//             mode: "sprite",
+//             svgId: "icon-%f",
+//             preview: "sprite.html",
+//             cssFile: "src/scss/_sprite-svg.scss",
+//             layout: "diagonal",
+//             svg: {
+//                 sprite: "icons-sprites.svg"
+//             },
+//             padding: 20,
+//             baseSize: 32,
+//         }))
+//         .pipe(gulp.dest('app/img/icons/'));
+// })
  
 
 

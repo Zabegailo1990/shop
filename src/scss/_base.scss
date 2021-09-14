@@ -1,18 +1,173 @@
 .root{
     margin: 0;
+    position: relative;
     overflow-x: hidden;
+    text-shadow: 0px 0px 1px rgba(150, 150, 149, 0.51);
 }
 
-.title,
+
+.link{
+    display: inline-block;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.title{
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: $Montserrat;
+    font-weight: 700;
+    margin: 0;
+
+    &__decor{
+        color: #ffde00;
+    }
+
+    &__line{
+        &::before{
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 2px;
+            background-color: #ffde00;
+            bottom: 0;
+        }
+    }
+
+    &--size--m{
+        font-size: 20px;
+    }
+
+    &--size--l{
+        font-size: 24px;
+    }
+
+    &--color--black{
+        color: #282828;
+    }
+
+    &--benefits{
+        font-family: $Roboto;
+        font-weight: 700;
+    }
+
+    &--news{
+        color: #292929;
+        font-size: 24px;
+    }
+
+    &--article{
+        font-family: $Roboto;
+        color: #282828;
+        font-size: 15px;
+        text-transform: none;
+    }
+}
+
 .subtitle{
+    color: #fff;
+    font-size: 12px;
+    font-family: $Montserrat;
+    font-weight: 400;
     margin: 0;
 }
 
 .text{
     margin: 0;
+    font-family: $Roboto;
+    font-weight: 300;
+    font-size: 12px;
+
+    &--color--white{
+        color: #fff;
+    }
+
+    &--guarantee{
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    &--newslatter{
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 12px;
+        color: #666666;
+    }
+
+    &--article{
+        color: #818690;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    &--reviews{
+        font-style: italic;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1b1b1b;
+    }
 }
 
-.link{
-    text-decoration: none;
-    display: inline-block;
+.btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: $Montserrat;
+    font-weight: 700;
+    font-size: 10px;
+    background-color: #ffde00;
+    border-radius: 30px;
+    padding: 16px 25px;
+    border: none;
+    cursor: pointer;
+
+    &__icon{
+        width: 16px;
+        height: 16px;
+
+        &--mail-form{
+            width: 10px;
+            height: 10px;
+        }
+
+        &--heart{
+            fill: #818690;
+            width: 15px;
+            height: 13px;
+        }
+
+        &--cart{
+            margin-right: 9px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__text{
+        font-size: 12px;
+        margin: 0;
+        line-height: 1;
+    }
+
+    &--mail-form{
+        padding: 0;
+        width: 37px;
+        height: 37px;
+    }
+
+    &--card{
+        padding: 0;
+        width: 47px;
+        height: 47px;
+        background-color: #e8ebf1;
+    }
 }

@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-benefit-air-name: 'icon-benefit_air';
+$icon-benefit-air-x: 162px;
+$icon-benefit-air-y: 0px;
+$icon-benefit-air-offset-x: -162px;
+$icon-benefit-air-offset-y: 0px;
+$icon-benefit-air-width: 34px;
+$icon-benefit-air-height: 34px;
+$icon-benefit-air-total-width: 196px;
+$icon-benefit-air-total-height: 128px;
+$icon-benefit-air-image: '../img/icons/icons-sprite.png';
+$icon-benefit-air: (162px, 0px, -162px, 0px, 34px, 34px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-benefit_air', );
+$icon-benefit-heart-name: 'icon-benefit_heart';
+$icon-benefit-heart-x: 0px;
+$icon-benefit-heart-y: 64px;
+$icon-benefit-heart-offset-x: 0px;
+$icon-benefit-heart-offset-y: -64px;
+$icon-benefit-heart-width: 39px;
+$icon-benefit-heart-height: 34px;
+$icon-benefit-heart-total-width: 196px;
+$icon-benefit-heart-total-height: 128px;
+$icon-benefit-heart-image: '../img/icons/icons-sprite.png';
+$icon-benefit-heart: (0px, 64px, 0px, -64px, 39px, 34px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-benefit_heart', );
+$icon-benefit-shipping-name: 'icon-benefit_shipping';
+$icon-benefit-shipping-x: 86px;
+$icon-benefit-shipping-y: 0px;
+$icon-benefit-shipping-offset-x: -86px;
+$icon-benefit-shipping-offset-y: 0px;
+$icon-benefit-shipping-width: 56px;
+$icon-benefit-shipping-height: 34px;
+$icon-benefit-shipping-total-width: 196px;
+$icon-benefit-shipping-total-height: 128px;
+$icon-benefit-shipping-image: '../img/icons/icons-sprite.png';
+$icon-benefit-shipping: (86px, 0px, -86px, 0px, 56px, 34px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-benefit_shipping', );
+$icon-benefit-wallet-name: 'icon-benefit_wallet';
+$icon-benefit-wallet-x: 59px;
+$icon-benefit-wallet-y: 64px;
+$icon-benefit-wallet-offset-x: -59px;
+$icon-benefit-wallet-offset-y: -64px;
+$icon-benefit-wallet-width: 38px;
+$icon-benefit-wallet-height: 34px;
+$icon-benefit-wallet-total-width: 196px;
+$icon-benefit-wallet-total-height: 128px;
+$icon-benefit-wallet-image: '../img/icons/icons-sprite.png';
+$icon-benefit-wallet: (59px, 64px, -59px, -64px, 38px, 34px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-benefit_wallet', );
+$icon-check-name: 'icon-check';
+$icon-check-x: 117px;
+$icon-check-y: 64px;
+$icon-check-offset-x: -117px;
+$icon-check-offset-y: -64px;
+$icon-check-width: 11px;
+$icon-check-height: 10px;
+$icon-check-total-width: 196px;
+$icon-check-total-height: 128px;
+$icon-check-image: '../img/icons/icons-sprite.png';
+$icon-check: (117px, 64px, -117px, -64px, 11px, 10px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-check', );
+$icon-close-name: 'icon-close';
+$icon-close-x: 0px;
+$icon-close-y: 118px;
+$icon-close-offset-x: 0px;
+$icon-close-offset-y: -118px;
+$icon-close-width: 10px;
+$icon-close-height: 10px;
+$icon-close-total-width: 196px;
+$icon-close-total-height: 128px;
+$icon-close-image: '../img/icons/icons-sprite.png';
+$icon-close: (0px, 118px, 0px, -118px, 10px, 10px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-close', );
+$icon-mail-name: 'icon-mail';
+$icon-mail-x: 0px;
+$icon-mail-y: 0px;
+$icon-mail-offset-x: 0px;
+$icon-mail-offset-y: 0px;
+$icon-mail-width: 66px;
+$icon-mail-height: 44px;
+$icon-mail-total-width: 196px;
+$icon-mail-total-height: 128px;
+$icon-mail-image: '../img/icons/icons-sprite.png';
+$icon-mail: (0px, 0px, 0px, 0px, 66px, 44px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-mail', );
+$icon-saving-bg-name: 'icon-saving_bg';
+$icon-saving-bg-x: 162px;
+$icon-saving-bg-y: 54px;
+$icon-saving-bg-offset-x: -162px;
+$icon-saving-bg-offset-y: -54px;
+$icon-saving-bg-width: 34px;
+$icon-saving-bg-height: 33px;
+$icon-saving-bg-total-width: 196px;
+$icon-saving-bg-total-height: 128px;
+$icon-saving-bg-image: '../img/icons/icons-sprite.png';
+$icon-saving-bg: (162px, 54px, -162px, -54px, 34px, 33px, 196px, 128px, '../img/icons/icons-sprite.png', 'icon-saving_bg', );
+$spritesheet-width: 196px;
+$spritesheet-height: 128px;
+$spritesheet-image: '../img/icons/icons-sprite.png';
+$spritesheet-sprites: ($icon-benefit-air, $icon-benefit-heart, $icon-benefit-shipping, $icon-benefit-wallet, $icon-check, $icon-close, $icon-mail, $icon-saving-bg, );
+$spritesheet: (196px, 128px, '../img/icons/icons-sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
