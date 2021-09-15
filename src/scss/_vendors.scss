@@ -3,18 +3,16 @@
 @import "../vendors/swiper/navigation.scss";
 @import "../vendors/swiper/grid.scss";
 
-.swiper-pagination-progressbar{
-    background-color: #e8ebf1;
-}
-
 .swiper-pagination-progressbar.swiper-pagination-horizontal{
     height: 1px;
+    background-color: #e8ebf1;
 }
 
 .swiper-pagination-progressbar{
     .swiper-pagination-progressbar-fill{
         height: 3px;
         background-color: #ffde00;
+        border-radius: 5px;
         top: auto;
         bottom: 0;
     }

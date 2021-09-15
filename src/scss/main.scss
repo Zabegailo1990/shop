@@ -107,19 +107,35 @@
 
 .logo{
     position: relative;
-    width: 96px;
-    height: 14px;
+    display: inline-block;
+    font-size: 17px;
+    color: #282828;
+    font-family: Montserrat;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.7;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 2px rgba(150, 150, 149, 1);
     padding-right: 50px;
 
     &::before{
         content: "";
         position: absolute;
         bottom: 0;
-        left: 100px;
+        right: 0;
         width: 45px;
         height: 26px;
         background-image: url(../img/images/sublogo.png);
         background-repeat: no-repeat;
+    }
+
+    &--pre-footer{
+        color: #4a4a4a;
+        text-shadow: none;
+
+        &::before{
+            background-image: url(../img/images/sublogo--pre-footer.png);
+        }
     }
 }
 
@@ -169,6 +185,7 @@
     }
 
     &__goods{
+        width: 300px;
         border-radius: 3px;
         overflow: hidden;
     }
@@ -285,16 +302,21 @@
 
     // в блок title
     &__title{
-        flex-basis: 50%;
         line-height: 30px;
     }
 
     &__icon{
         @include sprite($icon-mail);
+        flex-shrink: 0;
     }
 
     &__text{
         margin-bottom: 25px;
+    }
+
+    &--pre-footer{
+        background-color: transparent;
+        padding: 0;
     }
 }
 
@@ -837,6 +859,8 @@
 .location{
     position: relative;
     background-image: url(../img/images/location_bg.jpg);
+    box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset,
+                        0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
 
     &__inner{
         padding: 50px 0 30px;
@@ -868,5 +892,60 @@
         position: absolute;
         top: 56px;
         right: 10px;
+    }
+}
+
+.list{
+
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 38px;
+    }
+
+    &__product{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img{
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding: 5px;
+        width: 70px;
+        height: 70px;
+        border: 1px solid #eaedf4;
+        border-radius: 3px;
+        margin-right: 14px;
+    }
+
+    &__row{
+        display: flex;
+        margin-bottom: 8px;
+    }
+
+    &__categorie{
+
+    }
+}
+
+.pre-footer{
+    background-color: #282828;
+
+    &__title{
+        margin-bottom: 40px;
     }
 }

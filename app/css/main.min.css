@@ -149,7 +149,7 @@
     margin: 0;
     position: relative;
     overflow-x: hidden;
-    text-shadow: 0px 0px 1px rgba(150, 150, 149, 0.51);
+    text-shadow: 0px 0px 2px rgba(150, 150, 149, 0.5);
 }
 
 .link {
@@ -163,7 +163,6 @@
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-    line-height: 30px;
     text-transform: uppercase;
     font-family: "Montserrat";
     font-weight: 700;
@@ -172,13 +171,16 @@
 .title__decor {
     color: #ffde00;
 }
+.title__frame {
+    border-bottom: 1px solid #e8ebf1;
+}
 .title__line::before {
     content: "";
     position: absolute;
-    width: 70px;
+    width: 34px;
     height: 2px;
     background-color: #ffde00;
-    bottom: 0;
+    bottom: -12px;
 }
 .title--size--m {
     font-size: 20px;
@@ -795,17 +797,15 @@ button.swiper-pagination-bullet {
             flex-direction: column;
 }
 
-.swiper-pagination-progressbar {
-    background-color: #e8ebf1;
-}
-
 .swiper-pagination-progressbar.swiper-pagination-horizontal {
     height: 1px;
+    background-color: #e8ebf1;
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     height: 3px;
     background-color: #ffde00;
+    border-radius: 5px;
     top: auto;
     bottom: 0;
 }
@@ -925,19 +925,33 @@ button.swiper-pagination-bullet {
 
 .logo {
     position: relative;
-    width: 96px;
-    height: 14px;
+    display: inline-block;
+    font-size: 17px;
+    color: #282828;
+    font-family: Montserrat;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.7;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 2px #969695;
     padding-right: 50px;
 }
 .logo::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 100px;
+    right: 0;
     width: 45px;
     height: 26px;
     background-image: url(../img/images/sublogo.png);
     background-repeat: no-repeat;
+}
+.logo--pre-footer {
+    color: #4a4a4a;
+    text-shadow: none;
+}
+.logo--pre-footer::before {
+    background-image: url(../img/images/sublogo--pre-footer.png);
 }
 
 .cart {
@@ -979,6 +993,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 30px;
 }
 .slider__goods {
+    width: 300px;
     border-radius: 3px;
     overflow: hidden;
 }
@@ -1111,8 +1126,6 @@ button.swiper-pagination-bullet {
     margin-bottom: 15px;
 }
 .newslatter__title {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
     line-height: 30px;
 }
 .newslatter__icon {
@@ -1120,9 +1133,15 @@ button.swiper-pagination-bullet {
     background-position: 0px 0px;
     width: 66px;
     height: 44px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
 .newslatter__text {
     margin-bottom: 25px;
+}
+.newslatter--pre-footer {
+    background-color: transparent;
+    padding: 0;
 }
 
 .mail-form {
@@ -1694,6 +1713,8 @@ button.swiper-pagination-bullet {
 .location {
     position: relative;
     background-image: url(../img/images/location_bg.jpg);
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset, 0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
+            box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset, 0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
 }
 .location__inner {
     padding: 50px 0 30px;
@@ -1719,4 +1740,56 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 56px;
     right: 10px;
+}
+
+.list__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.list__item:not(:last-child) {
+    margin-bottom: 50px;
+}
+.list__title {
+    margin-bottom: 38px;
+}
+.list__product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.list__product:not(:last-child) {
+    margin-bottom: 20px;
+}
+.list__img {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #eaedf4;
+    border-radius: 3px;
+    margin-right: 14px;
+}
+.list__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 8px;
+}
+.pre-footer {
+    background-color: #282828;
+}
+.pre-footer__title {
+    margin-bottom: 40px;
 }
