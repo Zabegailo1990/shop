@@ -62,7 +62,6 @@ gulp.task('scssDev', function(){
 // Минификация JS***
 gulp.task('js', function(){
     return gulp.src([
-        'src/vendors/jquery/jquery.min.js',
         'src/vendors/**/*.js',
         'src/js/common.js',
     ])

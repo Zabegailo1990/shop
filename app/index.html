@@ -386,7 +386,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider__buttons slider__buttons--goods">
+                            <div class="slider__navigation goods__navigation">
                                 <div class="slider__prev slider__prev--goods">
                                     <svg class="slider__icon"><use xlink:href="./img/icons/icons-sprite.svg#icon-arrow-left"></use></svg>
                                 </div>
@@ -403,7 +403,7 @@
             <div class="container">
                 <h1 class="title title--news news__title">news</h1>
                 <div class="slider">
-                    <div class="slider__buttons slider__buttons--news">
+                    <div class="slider__navigation news__navigation">
                         <div class="slider__prev slider__prev--news">
                             <svg class="slider__icon"><use xlink:href="./img/icons/icons-sprite.svg#icon-arrow-left"></use></svg>
                         </div>
@@ -572,7 +572,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider__buttons reviews__buttons">
+                        <div class="slider__navigation reviews__navigation">
                             <div class="slider__prev slider__prev--reviews">
                                 <svg class="slider__icon"><use xlink:href="./img/icons/icons-sprite.svg#icon-arrow-left"></use></svg>
                             </div>
@@ -584,11 +584,21 @@
                 </div>
             </div>
         </div>
-        <section class="location page">
+        <section class="location">
             <div class="container">
                 <div class="location__inner">
-                    <h1 class="title title__line title--size--l title--color--black location__title">store location</h1>
-                        <div class="swiper swiper__location">
+                    <h1 class="title title--size--l title--color--black location__title">store location</h1>
+                    <div class="slider">
+                        <div class="slider__navigation location__navigation">
+                            <div class="slider__prev slider__prev--location">
+                                <svg class="slider__icon"><use xlink:href="./img/icons/icons-sprite.svg#icon-arrow-left"></use></svg>
+                            </div>
+                            <div class="slider__next slider__next--location">
+                                <svg class="slider__icon"><use xlink:href="./img/icons/icons-sprite.svg#icon-arrow-right"></use></svg>
+                            </div>
+                        </div>
+                        <div class="slider__pagination slider__pagination--location swiper-pagination"></div>
+                        <div class="swiper slider__location">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="location__item">
@@ -650,11 +660,13 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/script.min.js"></script>
 </body>
 </html>

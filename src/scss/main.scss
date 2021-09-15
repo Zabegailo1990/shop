@@ -134,24 +134,13 @@
 }
 
 .slider{
-    position: relative;
+    // border-radius: 3px;
+    // overflow: hidden;
 
-    &__buttons{
-        position: absolute;
+    &__navigation{
         display: flex;
         align-items: center;
         justify-content: center;
-
-        &--goods{
-            left: 50%;
-            bottom: -50px;
-            transform: translateX(-50%);
-        }
-
-        &--news{
-            top: -44px;
-            right: 0;
-        }
     }
 
     &__prev,
@@ -164,7 +153,7 @@
     }
 
     &__prev{
-        margin-right: 30px;
+        margin-right: 24px;
     }
 
     &__icon{
@@ -173,6 +162,7 @@
     }
 
     &__pagination{
+        position: static;
         height: 1px;
         margin-top: 2px;
         margin-bottom: 30px;
@@ -420,13 +410,6 @@
     }
 }
 
-.goods{
-    background-color: #f7f8fb;
-    padding: 42px 0 78px;
-    box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset,
-                        0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
-}
-
 .tabs{
     &__inner{
         display: flex;
@@ -641,6 +624,18 @@
     }
 }
 
+
+.goods{
+    background-color: #f7f8fb;
+    padding: 42px 0 47px;
+    box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset,
+                        0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
+
+    &__navigation{
+        margin-top: 20px;
+    }
+}
+
 .date{
     font-family: $Montserrat;
     font-size: 11px;
@@ -683,9 +678,16 @@
 }
 
 .news{
+    position: relative;
 
     &__title{
         margin-bottom: 20px;
+    }
+
+    &__navigation{
+        position: absolute;
+        top: 5px;
+        right: 10px;
     }
 }
 
@@ -780,7 +782,7 @@
         margin-bottom: 50px;
     }
 
-    &__buttons{
+    &__navigation{
         position: static;
     }
 }
@@ -833,11 +835,20 @@
 }
 
 .location{
+    position: relative;
     background-image: url(../img/images/location_bg.jpg);
+
+    &__inner{
+        padding: 50px 0 30px;
+    }
+
+    &__title{
+        margin-bottom: 20px;
+    }
 
     &__item{
         padding: 14px 12px 16px 14px;
-        background-color: rgb(119, 109, 109);
+        background-color: #fff;
         border-radius: 3px;
     }
 
@@ -851,5 +862,11 @@
 
     &__time{
         margin-bottom: 12px;
+    }
+
+    &__navigation{
+        position: absolute;
+        top: 56px;
+        right: 10px;
     }
 }

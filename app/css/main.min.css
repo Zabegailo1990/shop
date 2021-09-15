@@ -503,7 +503,17 @@
 }
 
 :root {
+    /*
     --swiper-pagination-color: var(--swiper-theme-color);
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    */
 }
 
 .swiper-pagination {
@@ -573,12 +583,12 @@
 }
 
 .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
     display: inline-block;
     border-radius: 50%;
-    background: #000;
-    opacity: 0.2;
+    background: var(--swiper-pagination-bullet-inactive-color, #000);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
 }
 button.swiper-pagination-bullet {
     border: none;
@@ -599,7 +609,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-bullet-active {
-    opacity: 1;
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
     background: var(--swiper-pagination-color, var(--swiper-theme-color));
 }
 
@@ -612,7 +622,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 6px 0;
+    margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
     display: block;
 }
 .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
@@ -635,7 +645,7 @@ button.swiper-pagination-bullet {
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 4px;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
 }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
@@ -785,67 +795,12 @@ button.swiper-pagination-bullet {
             flex-direction: column;
 }
 
-.jq-ry-container {
-    position: relative;
-    padding: 0 5px;
-    line-height: 0;
-    display: block;
-    cursor: pointer;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    direction: ltr;
-}
-
-.jq-ry-container[readonly=readonly] {
-    cursor: default;
-}
-
-.jq-ry-container > .jq-ry-group-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group {
-    position: relative;
-    line-height: 0;
-    z-index: 10;
-    white-space: nowrap;
-}
-
-.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
-    display: inline-block;
-}
-
-.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group {
-    width: 100%;
-}
-
-.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group {
-    width: 0;
-    z-index: 11;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    width: auto;
-    height: auto;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none;
-}
-
-.swiper-pagination {
-    position: static;
-}
-
 .swiper-pagination-progressbar {
     background-color: #e8ebf1;
+}
+
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    height: 1px;
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
@@ -994,11 +949,7 @@ button.swiper-pagination-bullet {
     fill: #282828;
 }
 
-.slider {
-    position: relative;
-}
-.slider__buttons {
-    position: absolute;
+.slider__navigation {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1009,30 +960,20 @@ button.swiper-pagination-bullet {
         -ms-flex-pack: center;
             justify-content: center;
 }
-.slider__buttons--goods {
-    left: 50%;
-    bottom: -50px;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-}
-.slider__buttons--news {
-    top: -44px;
-    right: 0;
-}
 .slider__prev.swiper-button-disabled, .slider__next.swiper-button-disabled {
     opacity: 0.35;
     cursor: auto;
     pointer-events: none;
 }
 .slider__prev {
-    margin-right: 30px;
+    margin-right: 24px;
 }
 .slider__icon {
     width: 12px;
     height: 12px;
 }
 .slider__pagination {
+    position: static;
     height: 1px;
     margin-top: 2px;
     margin-bottom: 30px;
@@ -1338,13 +1279,6 @@ button.swiper-pagination-bullet {
     bottom: 10px;
 }
 
-.goods {
-    background-color: #f7f8fb;
-    padding: 42px 0 78px;
-    -webkit-box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset, 0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
-            box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset, 0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
-}
-
 .tabs__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1558,6 +1492,16 @@ button.swiper-pagination-bullet {
     margin-right: 20px;
 }
 
+.goods {
+    background-color: #f7f8fb;
+    padding: 42px 0 47px;
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset, 0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
+            box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset, 0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
+}
+.goods__navigation {
+    margin-top: 20px;
+}
+
 .date {
     font-family: "Montserrat";
     font-size: 11px;
@@ -1600,8 +1544,16 @@ button.swiper-pagination-bullet {
     margin: 0;
 }
 
+.news {
+    position: relative;
+}
 .news__title {
     margin-bottom: 20px;
+}
+.news__navigation {
+    position: absolute;
+    top: 5px;
+    right: 10px;
 }
 
 .article__inner {
@@ -1685,7 +1637,7 @@ button.swiper-pagination-bullet {
 .reviews__text {
     margin-bottom: 50px;
 }
-.reviews__buttons {
+.reviews__navigation {
     position: static;
 }
 
@@ -1740,11 +1692,18 @@ button.swiper-pagination-bullet {
 }
 
 .location {
+    position: relative;
     background-image: url(../img/images/location_bg.jpg);
+}
+.location__inner {
+    padding: 50px 0 30px;
+}
+.location__title {
+    margin-bottom: 20px;
 }
 .location__item {
     padding: 14px 12px 16px 14px;
-    background-color: #776d6d;
+    background-color: #fff;
     border-radius: 3px;
 }
 .location__name {
@@ -1755,4 +1714,9 @@ button.swiper-pagination-bullet {
 }
 .location__time {
     margin-bottom: 12px;
+}
+.location__navigation {
+    position: absolute;
+    top: 56px;
+    right: 10px;
 }
