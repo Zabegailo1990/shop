@@ -219,6 +219,10 @@
     font-family: "Roboto";
     font-weight: 300;
     font-size: 12px;
+    line-height: 20px;
+}
+.text--color--light-gray {
+    color: #848484;
 }
 .text--color--white {
     color: #fff;
@@ -931,10 +935,10 @@ button.swiper-pagination-bullet {
     font-family: Montserrat;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 0.7;
     letter-spacing: 1px;
     text-shadow: 0px 0px 2px #969695;
     padding-right: 50px;
+    text-shadow: none;
 }
 .logo::before {
     content: "";
@@ -946,11 +950,10 @@ button.swiper-pagination-bullet {
     background-image: url(../img/images/sublogo.png);
     background-repeat: no-repeat;
 }
-.logo--pre-footer {
+.logo--color--gray {
     color: #4a4a4a;
-    text-shadow: none;
 }
-.logo--pre-footer::before {
+.logo--color--gray::before {
     background-image: url(../img/images/sublogo--pre-footer.png);
 }
 
@@ -1759,12 +1762,6 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
 }
 .list__product:not(:last-child) {
     margin-bottom: 20px;
@@ -1781,21 +1778,74 @@ button.swiper-pagination-bullet {
     border-radius: 3px;
     margin-right: 14px;
 }
+.list__col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
 .list__row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 8px;
 }
 
 .pre-footer {
     background-color: #282828;
+    padding: 50px 0 50px;
+}
+.pre-footer__item:not(:last-child) {
+    margin-bottom: 50px;
 }
 .pre-footer__title {
     margin-bottom: 40px;
 }
+.pre-footer__logo {
+    margin-bottom: 20px;
+}
+.pre-footer__text {
+    margin-bottom: 26px;
+}
+.pre-footer__article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.pre-footer__article:not(:last-child) {
+    margin-bottom: 20px;
+}
+.pre-footer__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 3px;
+    overflow: hidden;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 14px;
+}
+.pre-footer__col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
 
-.tags__inner {
+.tags {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

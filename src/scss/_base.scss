@@ -84,6 +84,11 @@
     font-family: $Roboto;
     font-weight: 300;
     font-size: 12px;
+    line-height: 20px;
+
+    &--color--light-gray{
+        color: #848484;
+    }
 
     &--color--white{
         color: #fff;
