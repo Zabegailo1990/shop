@@ -1,0 +1,36 @@
+.text{
+    font-family: $Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    color: #818690;
+    line-height: 20px;
+    margin: 0;
+
+    &--name{
+        font-family: $Montserrat;
+    }
+
+    &--thickness--m{
+        font-weight: 400;
+    }
+
+    &--line-size--m{
+        line-height: 24px;
+    }
+
+    &--style{
+        font-style: italic;
+    }
+    
+    &--color--white{
+        color: #fff;
+    }
+
+    &--color--light-gray{
+        color: #848484;
+    }
+
+    &--color---gray{
+        color: #666666;
+    }
+}

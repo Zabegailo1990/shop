@@ -1,0 +1,35 @@
+.benefits{
+    &__inner{
+        display: grid;
+        grid-gap: 20px 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__item{
+        text-align: center;
+    }
+
+    &__icon{
+        margin-bottom: 16px;
+    }
+
+    &__icon-shipping{
+        @include sprite($icon-benefit_shipping);
+    }
+
+    &__icon-heart{
+        @include sprite($icon-benefit_heart);
+    }
+
+    &__icon-air{
+        @include sprite($icon-benefit_air);
+    }
+
+    &__icon-wallet{
+        @include sprite($icon-benefit_wallet);
+    }
+
+    &__title{
+        margin-bottom: 10px;
+    }
+}

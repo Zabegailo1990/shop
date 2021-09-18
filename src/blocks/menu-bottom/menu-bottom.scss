@@ -1,0 +1,10 @@
+.menu-bottom{
+    border-bottom: 1px solid #eeeeee;
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 74px;
+    }
+}

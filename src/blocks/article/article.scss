@@ -1,0 +1,26 @@
+.article{
+
+    &__inner{
+        position: relative;
+        height: 165px;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 14px;
+    }
+
+    &__date{
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+
+    &__statistic{
+        position: absolute;
+        bottom: 11px;
+        left: 12px;
+    }
+
+    &__title{
+        margin-bottom: 5px;
+    }
+}

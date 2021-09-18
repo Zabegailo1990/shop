@@ -1,0 +1,45 @@
+.pre-footer{
+    background-color: #282828;
+    padding: 50px 0 50px;
+
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 40px;
+    }
+    
+    &__logo{
+        margin-bottom: 20px;
+    }
+
+    &__text{
+        margin-bottom: 26px;
+    }
+
+    &__article{
+        display: flex;
+
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img{
+        width: 70px;
+        height: 70px;
+        border-radius: 3px;
+        overflow: hidden;
+        flex-shrink: 0;
+        margin-right: 14px;
+    }
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

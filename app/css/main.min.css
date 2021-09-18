@@ -161,7 +161,7 @@
 .title {
     position: relative;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
     font-family: "Montserrat";
@@ -809,7 +809,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     height: 3px;
     background-color: #ffde00;
-    border-radius: 5px;
     top: auto;
     bottom: 0;
 }
@@ -846,6 +845,7 @@ button.swiper-pagination-bullet {
 
 .menu-top {
     background-color: #1e1e1e;
+    border-bottom: 1px solid #1c1c1c;
 }
 .menu-top__inner {
     display: -webkit-box;
@@ -858,7 +858,6 @@ button.swiper-pagination-bullet {
         -ms-flex-align: center;
             align-items: center;
     min-height: 40px;
-    border-bottom: 1px solid #1c1c1c;
 }
 
 .menu-bottom {
@@ -936,7 +935,6 @@ button.swiper-pagination-bullet {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 0px 0px 2px #969695;
     padding-right: 50px;
     text-shadow: none;
 }
@@ -1226,7 +1224,7 @@ button.swiper-pagination-bullet {
 .benefits__inner {
     display: grid;
     grid-gap: 20px 20px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
 }
 .benefits__item {
     text-align: center;
@@ -1762,6 +1760,9 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .list__product:not(:last-child) {
     margin-bottom: 20px;
@@ -1786,13 +1787,16 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    gap: 5px;
 }
 .list__row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .pre-footer {
@@ -1815,9 +1819,6 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
 }
 .pre-footer__article:not(:last-child) {
     margin-bottom: 20px;
@@ -1839,10 +1840,8 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 10px;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .tags {

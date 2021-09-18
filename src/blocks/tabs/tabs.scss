@@ -1,0 +1,28 @@
+.tabs{
+    &__inner{
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__item{
+        position: relative;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #404041;
+        font-family: $Montserrat;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    &__item.active::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ffde00;
+    }
+}

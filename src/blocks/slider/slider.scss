@@ -1,0 +1,46 @@
+.slider{
+    // border-radius: 3px;
+    // overflow: hidden;
+
+    &__navigation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__prev,
+    &__next{
+        &.swiper-button-disabled {
+            opacity: 0.35;
+            cursor: auto;
+            pointer-events: none;
+        }
+    }
+
+    &__prev{
+        margin-right: 24px;
+    }
+
+    &__icon{
+        width: 12px;
+        height: 12px;
+    }
+
+    &__pagination{
+        position: static;
+        height: 1px;
+        margin-top: 2px;
+        margin-bottom: 30px;
+    }
+
+    &__goods{
+        width: 300px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &__news{
+        border-radius: 3px;
+        overflow: hidden;
+    }
+}

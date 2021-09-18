@@ -1,0 +1,30 @@
+.custom{
+
+    &__inner{
+        position: relative;
+        height: 307px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &__col{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    &__title{
+        margin-bottom: 15px;
+    }
+
+    &__text{
+        margin-bottom: 20px;
+    }
+}

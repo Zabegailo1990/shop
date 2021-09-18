@@ -1,0 +1,33 @@
+.statistic{
+    display: flex;
+    font-family: $Montserrat;
+    font-size: 11px;
+    font-weight: 600;
+    color: #faf9f8;
+   
+    :nth-child(n){
+        display: flex;
+        align-items: center;
+    }
+
+    &__comments{
+        margin-right: 10px;
+    }
+
+    &__icon{
+        width: 10px;
+        height: 10px;
+        fill: #faf9f8;
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+    }
+
+    &__count{
+        margin-right: 4px;
+    }
+
+    &__text{
+        margin: 0;
+    }
+}

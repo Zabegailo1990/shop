@@ -1,0 +1,17 @@
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__item{
+        box-sizing: border-box;
+        font-family: $Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        padding: 8px 10px;
+        background-color: #1c1c1c;
+        text-decoration: none;
+        color: #6b6b6b;
+        border-radius: 3px;
+    }
+}

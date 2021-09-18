@@ -1,0 +1,27 @@
+.feature{
+    :not(:last-child){
+        margin-bottom: 5px;
+    }
+
+    font-family: $Montserrat;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    // text-align: right;
+    display: inline-block;
+
+    &__top{
+        color: #d24a43; 
+        // display: none;
+    }
+
+    &__sale{
+        color: #7cb91e;
+        // display: none;
+    }
+
+    &__hit{
+        color: #e4a427;
+        display: none;
+    }
+}

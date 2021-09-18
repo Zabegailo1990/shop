@@ -1,0 +1,68 @@
+.card{
+    position: relative;
+    box-sizing: border-box;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+
+    &__feature{
+        position: absolute;
+        text-align: right;
+        top: 20px;
+        right: 20px;
+    }
+
+    &__img{
+        height: 150px;
+        margin-bottom: 36px;
+    }
+
+    &__categorie{
+        margin-bottom: 5px;
+    }
+
+    &__name{
+        margin-bottom: 9px;
+    }
+
+    &__rating{
+        margin-bottom: 14px;
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__row:last-child{
+        margin-top: 20px;
+    }
+
+    &__col{
+        display: flex;
+        align-items: center;
+    }
+
+    &__saving{
+        margin-right: 7px;
+    }
+
+    &__availability{
+        align-self: flex-end;
+    }
+
+    &.card--false .availability__item--true{
+        display: none;
+    }
+
+    &.card--true .availability__item--false{
+        display: none;
+    }
+
+    &__btn{
+        flex-grow: 1;
+        margin-right: 20px;
+    }
+}

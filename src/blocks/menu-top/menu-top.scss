@@ -1,0 +1,11 @@
+.menu-top{
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #1c1c1c;
+
+    &__inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 40px;
+    }
+}

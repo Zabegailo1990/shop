@@ -1,0 +1,19 @@
+.newslatter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 225px;
+    border-radius: 3px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-sizing: border-box;
+
+    &__icon{
+        @include sprite($icon-mail);
+        flex-shrink: 0;
+    }
+
+    &__text{
+        margin-bottom: 25px;
+    }
+}

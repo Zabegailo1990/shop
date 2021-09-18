@@ -1,0 +1,11 @@
+.name{
+    font-family: $Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 22px;
+
+    &--location{
+        text-transform: none;
+    }
+}

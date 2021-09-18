@@ -1,0 +1,33 @@
+.categories{
+
+    &__inner{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 145px);
+        gap: 20px 10px;
+        grid-template-areas: 
+        "one one"
+        "two three"
+        "four four"
+        "five six";
+
+        :nth-child(1) { grid-area: one; }
+        :nth-child(2) { grid-area: two; }
+        :nth-child(3) { grid-area: three; }
+        :nth-child(4) { grid-area: four; }
+        :nth-child(5) { grid-area: five; }
+        :nth-child(6) { grid-area: six; }
+    }
+
+    &__item{
+        position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &__title{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+}

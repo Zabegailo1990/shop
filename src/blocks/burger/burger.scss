@@ -1,0 +1,36 @@
+.burger{
+    
+    cursor: pointer;
+    width: 18px;
+    height: 14px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    &__line{
+        position: relative;
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #282828;
+    }
+
+    &__line::before,
+    &__line::after{
+        content: "";
+        position: absolute;
+        background-color: #282828;
+        height: 2px;
+        width: 100%;
+  }
+
+    &__line::before{
+        top: 6px;
+        left: 0;
+    }
+
+    &__line::after{
+        bottom: 6px;
+        left: 0;
+    }
+}

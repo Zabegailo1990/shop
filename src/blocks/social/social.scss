@@ -1,0 +1,15 @@
+.social{
+    display: flex;
+    flex-direction: row;
+
+    &__link:not(:last-child){
+        margin-right: 18px;
+        cursor: pointer;
+    }
+
+    &__icon{
+        fill: #434343;
+        width: 16px;
+        height: 16px;
+    }
+}

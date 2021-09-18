@@ -1,0 +1,58 @@
+.title{
+    position: relative;
+    color: #282828;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $Montserrat;
+    font-weight: 700;
+    margin: 0;
+
+    &__decor{
+        color: #ffde00;
+    }
+
+    &__frame{
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            border-bottom: 1px solid #e8ebf1;
+        }
+    }
+
+    &__underline{
+        &::before{
+            content: "";
+            position: absolute;
+            width: 34px;
+            height: 2px;
+            background-color: #ffde00;
+            bottom: -12px;
+        }
+    }
+
+    &--size--m{
+        font-size: 20px;
+    }
+
+    &--size--l{
+        font-size: 24px;
+    }
+
+    &--font{
+        font-family: $Roboto;
+    }
+
+    &--text{
+        text-decoration: none;
+    }
+
+    &--line-size--l{
+        line-height: 30px;
+    }
+    
+    &--color--white{
+        color: #fff;
+    }
+}
