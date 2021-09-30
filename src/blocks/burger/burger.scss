@@ -1,5 +1,5 @@
 .burger{
-    
+    position: relative;
     cursor: pointer;
     width: 18px;
     height: 14px;
@@ -8,29 +8,28 @@
     padding: 0;
 
     &__line{
-        position: relative;
         display: block;
         height: 2px;
         width: 100%;
         background-color: #282828;
-    }
 
-    &__line::before,
-    &__line::after{
-        content: "";
-        position: absolute;
-        background-color: #282828;
-        height: 2px;
-        width: 100%;
-  }
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: inherit;
+            height: inherit;
+            width: inherit;
+        }
 
-    &__line::before{
-        top: 6px;
-        left: 0;
-    }
-
-    &__line::after{
-        bottom: 6px;
-        left: 0;
+        &::before{
+            top: 0;
+            left: 0;
+        }
+    
+        &::after{
+            bottom: 0;
+            left: 0;
+        }
     }
 }

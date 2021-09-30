@@ -22,13 +22,13 @@
     &__input::placeholder{
         font-family: $Montserrat;
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 500;
         color: #dedede;
         padding-bottom: 50px;
         transform: translateY(-1px)
     }
 
-    &__btn{
+    &__button{
         position: absolute;
         top: 50%;
         right: 5px;

@@ -10,6 +10,8 @@
 
     &__prev,
     &__next{
+        cursor: pointer;
+
         &.swiper-button-disabled {
             opacity: 0.35;
             cursor: auto;

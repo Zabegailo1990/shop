@@ -1,13 +1,16 @@
 .news{
-    position: relative;
-
+    
+    &__inner{
+        position: relative;
+    }
+    
     &__title{
         margin-bottom: 20px;
     }
 
     &__navigation{
         position: absolute;
-        top: 5px;
-        right: 10px;
+        top: 6px;
+        right: 0;
     }
 }

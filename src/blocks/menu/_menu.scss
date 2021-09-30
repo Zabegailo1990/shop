@@ -1,0 +1,112 @@
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    display: none;
+    overflow: scroll;
+    background-color: rgb(230, 230, 212);
+    z-index: 10;
+
+    &__display{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &__name{
+        text-transform: uppercase;
+        font-weight: 600;
+        color: lightcoral;
+    }
+
+    &__close{
+        // @include sprite($icon-menuclose);
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        cursor: pointer;
+    }
+
+}
+
+.menu__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__title{
+    text-transform: uppercase;
+    border-top: 1px solid rgb(190, 179, 179);
+}
+
+.menu__link{
+    color: rgb(158, 158, 158);
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+}
+
+.menu__submenu{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(204, 204, 204);
+}
+
+.menu__navigation{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+}
+
+.menu__back{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(228, 146, 146);
+    cursor: pointer;
+}
+
+.menu__sublist{
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(204, 204, 204);
+    border-top: 1px solid rgb(190, 179, 179);
+    overflow-y: visible;
+}
+
+.menu__sub-submenu{
+    display: none;
+    background-color: rgb(204, 204, 204);
+}
+
+.menu__sub-sublist{
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(189, 144, 144);
+    border-top: 1px solid rgb(190, 179, 179);
+}
+
+/* .menu__title.active .menu__sublist{
+    display: block;
+} */
+
+.menu__item:not(:first-child){
+    border-top: 1px solid rgb(190, 179, 179);
+}

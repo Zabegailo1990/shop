@@ -6,4 +6,8 @@
 .row{
     display: flex;
     flex-direction: row;
+
+    &--between{
+        justify-content: space-between;
+    }
 }

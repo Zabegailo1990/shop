@@ -6,8 +6,8 @@
 
     &__saving{
         position: relative;
-        margin-right: 5px;
         @include sprite($icon-saving_bg);
+        margin-right: 5px;
     }
 
     &__count{
@@ -18,26 +18,26 @@
         top: 50%;
         left: 5px;
         transform: translateY(-50%);
-    }
 
-    &__count::after{
-       content: "%";
+        &::after{
+            content: "%";
+         }
     }
 
     &__old{
         font-size: 12px;
         color: #9a9a9a;
-    }
 
-    &__old::before{
-        content: "$";
+        &::before{
+            content: "$";
+        }
     }
 
     &__current{
         font-size: 20px;
-    }
 
-    &__current::before{
-        content: "$";
+        &::before{
+            content: "$";
+        }
     }
 }

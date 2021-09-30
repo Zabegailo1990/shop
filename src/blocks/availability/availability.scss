@@ -7,18 +7,18 @@
     &__item{
         display: flex;
         align-items: center;
-    }
 
-    &__item::before{
-        content: "";
-        margin-right: 4px;
-    }
+        &::before{
+            content: "";
+            margin-right: 4px;
+        }
 
-    &__item--true::before{
-        @include sprite($icon-check);
-    }
+        &--true::before{
+            @include sprite($icon-check);
+        }
 
-    &__item--false::before{
-        @include sprite($icon-close);
+        &--false::before{
+            @include sprite($icon-close);
+        }
     }
 }

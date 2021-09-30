@@ -1,7 +1,7 @@
 .title{
     position: relative;
     color: #282828;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: $Montserrat;
@@ -40,12 +40,12 @@
         font-size: 24px;
     }
 
-    &--font{
+    &--font-name{
         font-family: $Roboto;
     }
 
-    &--text{
-        text-decoration: none;
+    &--reset--text{
+       text-transform: none;
     }
 
     &--line-size--l{

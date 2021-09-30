@@ -1,21 +1,18 @@
 .guarantee{
     position: relative;
     max-height: 225px;
-    border-radius: 3px;
-    overflow: hidden;
-    box-sizing: border-box;
 
-    &__img{
-        height: 225px;
-    }
-
-    &__column{
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    &__inner{
+        @include pos-cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         box-sizing: border-box;
         padding: 20px;
+    }
+
+    &__title{
+        line-height: 30px;
+        margin-bottom: 15px;
     }
 }

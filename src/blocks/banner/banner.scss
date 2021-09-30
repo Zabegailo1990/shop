@@ -1,36 +1,24 @@
 .banner{
-    border-radius: 3px;
-    overflow: hidden;
     
     &__item{
         position: relative;
-        max-width: 870px;
         height: 200px; 
-        border-radius: 3px;
-        overflow: hidden;
     }
 
     &__row{
-        position: absolute;
+        @include pos-cover;
         display: flex;
+        align-items: flex-end;
         justify-content: space-between;
         box-sizing: border-box;
         padding: 10px;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-    }
-
-    &__col{
-        flex-basis: 50%;
     }
 
     &__title{
-        line-height: 30px;
         margin-bottom: 15px;
     }
 
-    &__link{
-        align-self: flex-end;
+    &__btn{
+        flex-shrink: 0;
     }
 }

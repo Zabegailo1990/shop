@@ -3,10 +3,17 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 225px;
-    border-radius: 3px;
     background-color: #1e1e1e;
-    padding: 20px;
     box-sizing: border-box;
+    padding: 20px;
+   
+
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
 
     &__icon{
         @include sprite($icon-mail);

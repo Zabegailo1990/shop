@@ -1,0 +1,24 @@
+@mixin pos-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin pos-cover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin fontFace($fontName, $fontFileName, $fontWeight, $fontStyle){
+    @font-face{
+        font-display: swap;
+        font-family: $fontName;
+        src: local($fontName), url('../fonts/' + $fontFileName + '.woff2') format('woff2');
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+    }
+}

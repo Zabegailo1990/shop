@@ -1,10 +1,10 @@
 .location{
-    position: relative;
     background-image: url(../img/images/location_bg.jpg);
     box-shadow: 0px 4px 3px 0px rgba(34, 60, 80, 0.05) inset,
                         0px -4px 3px 0px rgba(34, 60, 80, 0.05) inset;
 
     &__inner{
+        position: relative;
         padding: 50px 0 30px;
     }
 
@@ -15,7 +15,6 @@
     &__item{
         padding: 14px 12px 16px 14px;
         background-color: #fff;
-        border-radius: 3px;
     }
 
     &__name{
@@ -33,6 +32,6 @@
     &__navigation{
         position: absolute;
         top: 56px;
-        right: 10px;
+        right: 0;
     }
 }

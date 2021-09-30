@@ -17,7 +17,6 @@
 
     &__product{
         display: flex;
-        align-items: center;
 
         &:not(:last-child){
             margin-bottom: 20px;
@@ -26,23 +25,30 @@
 
     &__img{
         flex-shrink: 0;
-        box-sizing: border-box;
-        padding: 5px;
         width: 70px;
         height: 70px;
+        box-sizing: border-box;
+        padding: 5px;
         border: 1px solid #eaedf4;
-        border-radius: 3px;
         margin-right: 14px;
     }
 
-    &__col{
+    &__column{
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        justify-content: space-evenly;
     }
 
     &__row{
         display: flex;
-        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    &__categorie{
+        margin-bottom: 4px;
+    }
+
+    &__name{
+        align-self: flex-start;
     }
 }

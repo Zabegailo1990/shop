@@ -1,15 +1,15 @@
 .button{
-    position: relative;
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
     text-transform: uppercase;
     font-family: $Montserrat;
     font-weight: 700;
     font-size: 10px;
     background-color: #ffde00;
     border-radius: 30px;
+    box-sizing: border-box;
     padding: 16px 25px;
     border: none;
     cursor: pointer;
@@ -37,13 +37,18 @@
     }
 
     &__text{
-        font-size: 12px;
+        font-size: 10px;
         margin: 0;
         line-height: 1;
     }
 
     &--reset{
         padding: 0;
+    }
+
+    &--size--s{
+        width: 37px;
+        height: 37px;
     }
 
     &--bg--light{

@@ -160,7 +160,8 @@ gulp.task('pngSprite', function(){
 
 //Watch***
 gulp.task('watch', function(){
-	gulp.watch('src/scss/**/*.scss', gulp.parallel('scssDev'));
+	gulp.watch('src/blocks/**/*.scss', gulp.parallel('scssDev'));
+    gulp.watch('src/scss/**/main.scss', gulp.parallel('scssDev'));
 	gulp.watch('src/js/common.js', gulp.parallel('js'));
 	gulp.watch('app/*.html', gulp.parallel('html'));
 });

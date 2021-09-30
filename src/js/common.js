@@ -1,9 +1,9 @@
      new Swiper('.slider__banner', {
          spaceBetween: 15,
-         autoplay: {
-             delay: 2500,
-             disableOnInteraction: false,
-         },
+        //  autoplay: {
+        //      delay: 2500,
+        //      disableOnInteraction: false,
+        //  },
          keyboard: {
              enabled: true,
          },
@@ -77,6 +77,61 @@
                 ths.find('.tabs__item').removeClass('active').eq($(this).index()).addClass('active');
                 ths.find('.tabs__content').hide().eq($(this).index()).fadeIn()
             }).eq(0).addClass('active');
+
+             // !BURGER
+
+            $('.burger').click(function(){
+                var pageHeight = $(document).height();
+                $(this).nextAll('.menu').css({'height': ($(window))})
+                $(this).nextAll('.menu').animate({width:'show'}, 250).children('.menu__list').animate({opacity:'show'}, 250);
+            })
+
+            // ! MENU
+
+            $
+
+
+            //!     CLOSE
+
+            $('.menu__close').on('click', function(){
+                var $menu = $(this).parents('.menu');
+
+                if($menu.is(':visible')){
+                    $menu.animate({width:'hide'}, 250);
+                }else{
+                    $(this).off('click');
+                }
+            })
+            
+            //!     SUBMENU
+
+            $('.menu__title').click(function(){
+                $(this).children('.menu__submenu').animate({width:'show'}, 250)
+                // e.stopPropagation();
+            })
+            
+
+            $('.menu__item').click(function(e){
+                $(this).children('.menu__sub-submenu').animate({height:'toggle'}, 650);
+                e.stopPropagation();
+            })
+
+            // !BACK
+
+            $('.menu__back').click(function(e){
+                var $sublist = $(this).next('.menu__sublist').find('.menu__sub-submenu');
+                var $submenu = $(this).parent('.menu__submenu');
+
+
+                if ($sublist.is(':visible') && $submenu.is(':visible')) {
+                    $sublist.animate({height:'hide'}, 250)
+                }else{
+                    $submenu.animate({width:'hide'}, 250)            
+                }
+                e.stopPropagation();
+            })
+
+           
         });
 
         // $(".rating").rateYo({

@@ -6,12 +6,20 @@
     line-height: 20px;
     margin: 0;
 
-    &--name{
+    &--font-size--m{
+        font-size: 14px;
+    }
+
+    &--font-size--l{
+        font-size: 16px;
+    }
+
+    &--font-name{
         font-family: $Montserrat;
     }
 
     &--thickness--m{
-        font-weight: 400;
+        font-weight: 500;
     }
 
     &--line-size--m{
@@ -30,7 +38,11 @@
         color: #848484;
     }
 
-    &--color---gray{
+    &--color--gray{
         color: #666666;
+    }
+
+    &--color--black{
+        color: #1b1b1b;
     }
 }
