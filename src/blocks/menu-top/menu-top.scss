@@ -1,6 +1,8 @@
 .menu-top{
+    position: relative;
     background-color: #1e1e1e;
     border-bottom: 1px solid #1c1c1c;
+    z-index: 3;
 
     &__inner{
         display: flex;

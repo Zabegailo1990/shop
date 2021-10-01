@@ -37,7 +37,7 @@ gulp.task('html', function(){
 // CSS компилятор ***
     // Для команды gulp prod
 gulp.task('scssProd', function(){
-    return gulp.src('src/scss/main.scss')
+    return gulp.src('src/blocks/main.scss')
         .pipe(scss({outputStyle: 'compressed'}).on('error', scss.logError))
         .pipe(autoprefix(['last 5 versions']))
         .pipe(rename({suffix: '.min', prefix : ''}))
@@ -46,7 +46,7 @@ gulp.task('scssProd', function(){
 
     // Для команды gulp dev
 gulp.task('scssDev', function(){
-    return gulp.src('src/scss/main.scss')
+    return gulp.src('src/blocks/main.scss')
         .pipe(scss({
             outputStyle: 'expanded',
             indentWidth: 4,
@@ -64,6 +64,7 @@ gulp.task('js', function(){
     return gulp.src([
         'src/vendors/**/*.js',
         'src/js/common.js',
+        'src/blocks/**/*.js'
     ])
         .pipe(concat('script.min.js'))
         .pipe(uglify())
@@ -161,7 +162,7 @@ gulp.task('pngSprite', function(){
 //Watch***
 gulp.task('watch', function(){
 	gulp.watch('src/blocks/**/*.scss', gulp.parallel('scssDev'));
-    gulp.watch('src/scss/**/main.scss', gulp.parallel('scssDev'));
+    gulp.watch('src/blocks/**/*.js', gulp.parallel('js'));
 	gulp.watch('src/js/common.js', gulp.parallel('js'));
 	gulp.watch('app/*.html', gulp.parallel('html'));
 });

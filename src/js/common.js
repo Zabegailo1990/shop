@@ -80,58 +80,51 @@
 
              // !BURGER
 
-            $('.burger').click(function(){
-                var pageHeight = $(document).height();
-                $(this).nextAll('.menu').css({'height': ($(window))})
-                $(this).nextAll('.menu').animate({width:'show'}, 250).children('.menu__list').animate({opacity:'show'}, 250);
-            })
-
-            // ! MENU
-
-            $
-
-
+            // $('.burger').click(function(){
+            //     $(this).parents('.root').css({"overflow": "hidden"});
+            //     $('<div class="overlay"></div>').prependTo('.root');
+            //     $(this).nextAll('.menu').animate({width:'show'}, 250);
+            // })
+            
             //!     CLOSE
 
-            $('.menu__close').on('click', function(){
-                var $menu = $(this).parents('.menu');
-
-                if($menu.is(':visible')){
-                    $menu.animate({width:'hide'}, 250);
-                }else{
-                    $(this).off('click');
-                }
-            })
+            // $('.menu__close').on('click', function(){
+            //     var $root = $(this).parents('.root');
+            //     var $menu = $(this).parents('.menu');
+            //     $root.removeAttr("style");
+            //         if($menu.is(':visible')){
+            //             $menu.animate({width:'hide'}, 250);
+            //         }else{
+            //             $root.removeAttr("style");
+            //             $(this).off('click');
+            //         }
+            // })
             
-            //!     SUBMENU
+            // //!     SUBMENU
 
-            $('.menu__title').click(function(){
-                $(this).children('.menu__submenu').animate({width:'show'}, 250)
-                // e.stopPropagation();
-            })
+            // $('.menu__title').click(function(){
+            //     $(this).children('.menu__submenu').animate({width:'show'}, 250);
+            // })
             
 
-            $('.menu__item').click(function(e){
-                $(this).children('.menu__sub-submenu').animate({height:'toggle'}, 650);
-                e.stopPropagation();
-            })
+            // $('.menu__item').click(function(e){
+            //     $(this).children('.menu__sub-submenu').animate({height:'toggle'}, 650);
+            //     e.stopPropagation();
+            // })
 
-            // !BACK
+            // // !BACK
 
-            $('.menu__back').click(function(e){
-                var $sublist = $(this).next('.menu__sublist').find('.menu__sub-submenu');
-                var $submenu = $(this).parent('.menu__submenu');
+            // $('.menu__back').click(function(e){
+            //     var $sub_submenu = $(this).next('.menu__sublist').find('.menu__sub-submenu');
+            //     var $submenu = $(this).parent('.menu__submenu');
+            //     if ($sub_submenu.is(':visible') && $submenu.is(':visible')) {
+            //         $sub_submenu.animate({height:'hide'}, 250)
+            //     }else{
+            //         $submenu.animate({width:'hide'}, 250)            
+            //     }
+            //     e.stopPropagation();
+            // })
 
-
-                if ($sublist.is(':visible') && $submenu.is(':visible')) {
-                    $sublist.animate({height:'hide'}, 250)
-                }else{
-                    $submenu.animate({width:'hide'}, 250)            
-                }
-                e.stopPropagation();
-            })
-
-           
         });
 
         // $(".rating").rateYo({
