@@ -19,11 +19,12 @@
 // !Dev blocks //
 @import "./menu-top/menu-top.scss";
 @import "./menu-bottom/menu-bottom.scss";
-@import "./menu/menu.scss";
+@import "./search/search.scss";
+@import "./field/field.scss";
 @import "./social/social.scss";
 @import "./burger/burger.scss";
-@import "./close/close.scss";
 @import "./logo/logo.scss";
+@import "./menu/menu.scss";
 @import "./cart/cart.scss";
 @import "./promo/promo.scss";
 @import "./slider/slider.scss";
@@ -55,3 +56,5 @@
 @import "./list/list.scss";
 @import "./pre-footer/pre-footer.scss";
 @import "./tags/tags.scss";
+@import "./footer/footer.scss";
+@import "./paysys/paysys.scss";

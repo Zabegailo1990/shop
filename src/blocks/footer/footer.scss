@@ -1,0 +1,16 @@
+.footer{
+    
+    &__top{
+        background-color: #202020;
+        display: flex;
+        align-items: center;
+        min-height: 90px;
+    }
+
+    &__bottom{
+        background-color: #282828;
+        min-height: 90px;
+         display: flex;
+        align-items: center;
+    }
+}
